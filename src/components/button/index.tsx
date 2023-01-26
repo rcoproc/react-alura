@@ -8,15 +8,13 @@ interface IProps {
 
 }
 
-class Botao extends React.Component<IProps>{
-    render() {
-        const {type="button", onClick } = this.props;
+export default function Botao({onClick, type, children}: IProps) {
         return (
-            <button onClick={onClick} type={type} className={style.botao}>
-                {this.props.children}
+            <button onClick={onClick} 
+                type={type} 
+                className={style.botao}
+            >
+                {children}
             </button>
         )
-    }
 }
-
-export default Botao;
