@@ -27,7 +27,7 @@ export default function Formulario({setTarefas}: Props) {
     }
 
     return (
-        <form className={style.novaTarefa} >
+        <form className={style.novaTarefa} onSubmit={adicionarTarefa} >
             <div className={style.inputContainer}>
                 <label htmlFor="tarefa">
                     Adicione um novo estudo
